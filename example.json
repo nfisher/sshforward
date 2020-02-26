@@ -1,0 +1,37 @@
+{
+    "environment": "k8smulti",
+    "hosts": [
+        {
+            "name": "master",
+            "address": "127.0.0.1:2222",
+            "endpoints": [
+                {
+                    "name": "kubelet",
+                    "remote": "localhost:10250",
+                    "local": "localhost:10250"
+                },
+                {
+                    "name": "kubeproxy",
+                    "remote": "localhost:10256",
+                    "local": "localhost:10256"
+                }
+            ]
+        },
+        {
+            "name": "node01",
+            "address": "127.0.0.1:2223",
+            "endpoints": [
+                {
+                    "name": "kubelet",
+                    "remote": "localhost:10250",
+                    "local": "localhost:20250"
+                },
+                {
+                    "name": "kubeproxy",
+                    "remote": "localhost:10256",
+                    "local": "localhost:20256"
+                }
+            ]
+        }
+    ]
+}
